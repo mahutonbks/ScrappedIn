@@ -1,0 +1,4 @@
+/target
+.env
+linkedin_session.json
+*.log

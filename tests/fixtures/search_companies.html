@@ -1,0 +1,34 @@
+<!--
+  Company search results (/search/results/companies/?keywords=…), page 1.
+  Structure copied from the real LinkedIn DOM observed on 2026-11-13 (SDUI UI,
+  French interface): classes and SVG content removed, every name, slug,
+  description, follower count and componentkey replaced by fictitious values.
+  Observed facts reproduced here:
+    * one div[role="listitem"] per result (10 per page on LinkedIn), nested in an
+      <a href="/company/<slug>/"> wrapper preceded by a hidden duplicate name link;
+    * inside: figure (logo), then <p><a href="/company/<slug>/">Name</a></p>,
+      then sibling <div><p> for the subtitle (industry) and the location;
+    * then a description <p> (search terms in <strong>) and a followers <p>;
+    * locations can be odd ("France , ");
+    * pagination = buttons aria-label="Page N" (no ?page= links), while the
+      ?page=N URL parameter is honoured.
+  Synthetic (not observed): the <aside> decoy link.
+-->
+<main>
+  <div><p>4&nbsp;résultats</p></div>
+  <div>
+    <div data-display-contents="true"><a href="https://www.linkedin.com/company/acme-compost/" componentkey="0b6f5a3e-0001-4000-8000-000000000001"><div><a href="https://www.linkedin.com/company/acme-compost/">Acme Compost</a></div><div role="listitem" componentkey="0b6f5a3e-0001-4000-8000-000000000001" aria-labelledby="7d1c0000-0000-4000-8000-000000000001"><div><figure aria-hidden="true"><img alt=""></figure><div><p><a href="https://www.linkedin.com/company/acme-compost/">Acme Compost</a></p><div><p><span>Collecte des déchets</span></p></div><div><p><span>Toulon, Provence-Alpes-Côte d’Azur</span></p></div></div><div><div data-display-contents="true"><div componentkey="5a5f0000-0000-4000-8000-000000000001"><div data-display-contents="true"><button type="button" componentkey="auto-component-0000-0001" aria-label="Suivre Acme Compost"><span><svg/><div><span><span>Suivre</span></span></div></span></button></div></div></div></div></div><div><div><div><div><p><span>Chez<span><strong>Acme</strong></span><span><strong>Compost</strong></span>, nous collectons les biodéchets et les transformons en compost.</span></p></div><div componentkey="ffa30000-0000-4000-8000-000000000001"><div><p componentkey="23c80000-0000-4000-8000-000000000001"><span>1&#8239;204&nbsp;abonnés</span></p></div></div></div></div></div></div></a></div><hr role="presentation">
+    <div data-display-contents="true"><a href="https://www.linkedin.com/company/acme-compost-sas/" componentkey="0b6f5a3e-0002-4000-8000-000000000002"><div><a href="https://www.linkedin.com/company/acme-compost-sas/">Acme Compost</a></div><div role="listitem" componentkey="0b6f5a3e-0002-4000-8000-000000000002" aria-labelledby="7d1c0000-0000-4000-8000-000000000002"><div><figure aria-hidden="true"><img alt=""></figure><div><p><a href="https://www.linkedin.com/company/acme-compost-sas/">Acme Compost</a></p><div><p><span>Services de conseil en environnement</span></p></div><div><p><span>Paris, Île-de-France</span></p></div></div><div><div data-display-contents="true"><div componentkey="5a5f0000-0000-4000-8000-000000000002"><div data-display-contents="true"><button type="button" componentkey="auto-component-0000-0002" aria-label="Suivre Acme Compost"><span><svg/><div><span><span>Suivre</span></span></div></span></button></div></div></div></div></div><div><div><div><div><p><span>Conseil en gestion des biodéchets pour les collectivités.</span></p></div><div componentkey="ffa30000-0000-4000-8000-000000000002"><div><p componentkey="23c80000-0000-4000-8000-000000000002"><span>26&#8239;388&nbsp;abonnés</span></p></div></div></div></div></div></div></a></div><hr role="presentation">
+    <div data-display-contents="true"><a href="https://www.linkedin.com/company/acme-compost-lyon/" componentkey="0b6f5a3e-0003-4000-8000-000000000003"><div><a href="https://www.linkedin.com/company/acme-compost-lyon/">Acme Compost Lyon</a></div><div role="listitem" componentkey="0b6f5a3e-0003-4000-8000-000000000003" aria-labelledby="7d1c0000-0000-4000-8000-000000000003"><div><figure aria-hidden="true"><img alt=""></figure><div><p><a href="https://www.linkedin.com/company/acme-compost-lyon/">Acme Compost Lyon</a></p><div><p><span>Services de conseil en environnement</span></p></div><div><p><span>Vénissieux</span></p></div></div><div><div data-display-contents="true"><div componentkey="5a5f0000-0000-4000-8000-000000000003"><div data-display-contents="true"><button type="button" componentkey="auto-component-0000-0003" aria-label="Suivre Acme Compost Lyon"><span><svg/><div><span><span>Suivre</span></span></div></span></button></div></div></div></div></div><div><div><div><div><p><span>Ensemble, composter et nourrir les sols !</span></p></div><div componentkey="ffa30000-0000-4000-8000-000000000003"><div><p componentkey="23c80000-0000-4000-8000-000000000003"><span>7&#8239;007&nbsp;abonnés</span></p></div></div></div></div></div></div></a></div><hr role="presentation">
+    <div data-display-contents="true"><a href="https://www.linkedin.com/company/acmefilms/" componentkey="0b6f5a3e-0004-4000-8000-000000000004"><div><a href="https://www.linkedin.com/company/acmefilms/">Acme Films</a></div><div role="listitem" componentkey="0b6f5a3e-0004-4000-8000-000000000004" aria-labelledby="7d1c0000-0000-4000-8000-000000000004"><div><figure aria-hidden="true"><img alt=""></figure><div><p><a href="https://www.linkedin.com/company/acmefilms/">Acme Films</a></p><div><p><span>Production audiovisuelle</span></p></div><div><p><span>France , </span></p></div></div><div><div data-display-contents="true"><div componentkey="5a5f0000-0000-4000-8000-000000000004"><div data-display-contents="true"><button type="button" componentkey="auto-component-0000-0004" aria-label="Suivre Acme Films"><span><svg/><div><span><span>Suivre</span></span></div></span></button></div></div></div></div></div><div><div><div><div componentkey="ffa30000-0000-4000-8000-000000000004"><div><p componentkey="23c80000-0000-4000-8000-000000000004"><span>312&nbsp;abonnés</span></p></div></div></div></div></div></div></a></div><hr role="presentation">
+  </div>
+  <div>
+    <button type="button" aria-label="Page 1" aria-current="true">1</button>
+    <button type="button" aria-label="Page 2">2</button>
+    <button type="button">Suivant</button>
+  </div>
+</main>
+<aside aria-label="De côté">
+  <!-- synthetic decoy: must not be returned as a result -->
+  <a href="https://www.linkedin.com/company/sponsor-decoy/">Sponsor Decoy</a>
+</aside>

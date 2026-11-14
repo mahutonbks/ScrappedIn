@@ -1,0 +1,36 @@
+<!--
+  Company page top card + embedded data, for the numeric company id.
+  Structure copied from the real LinkedIn company page observed on 2026-11-13
+  (company pages still use the older Ember DOM with readable org-* classes);
+  names and ids replaced by fictitious values.
+  Observed facts reproduced here:
+    * the company's own id is in the top-card "N employés" link:
+      /search/results/people/?currentCompany=%5B%22<id>%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH
+      (also repeated in the About module);
+    * a decoy link for another company exists ("people from your school work
+      here"): currentCompany=[<other id>] + schoolFilter=[…], no CANNED_SEARCH origin;
+    * embedded JSON contains urn:li:fsd_company:<id> / urn:li:company:<id> for the
+      page's company (most frequent) and for related companies.
+-->
+<main>
+  <section class="org-top-card">
+    <div class="org-top-card__primary-content">
+      <h1 class="org-top-card-summary__title" title="Acme Compost">Acme Compost</h1>
+      <p class="org-top-card-summary__tagline">Collecte et compostage des biodéchets</p>
+      <div class="org-top-card-summary-info-list">
+        <div class="org-top-card-summary-info-list__info-item">Collecte des déchets</div>
+        <div class="inline-block">
+          <div class="org-top-card-summary-info-list__info-item">Toulon, Provence-Alpes-Côte d’Azur</div>
+          <div class="org-top-card-summary-info-list__info-item">1&nbsp;K abonnés</div>
+          <a href="/search/results/people/?currentCompany=%5B%2212345678%22%5D&amp;origin=COMPANY_PAGE_CANNED_SEARCH" class="org-top-card-summary-info-list__info-item org-top-card-summary-info-list__info-item-link"><span>11-50&nbsp;employés</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="org-commitments-module">
+    <div class="org-commitments-module__hovercard-description">
+      <a href="/search/results/people/?currentCompany=%5B%22999001%22%5D&amp;schoolFilter=%5B%2215250774%22%5D">3 anciens élèves travaillent ici</a>
+    </div>
+  </section>
+</main>
+<code style="display: none">{"data":{"entityUrn":"urn:li:fsd_company:12345678","*elements":["urn:li:fsd_company:999001"]},"included":[{"entityUrn":"urn:li:fsd_company:12345678","$type":"com.linkedin.voyager.dash.organization.Company"},{"entityUrn":"urn:li:fsd_company:999001"},{"company":"urn:li:company:12345678"},{"followingState":"urn:li:fsd_followingState:urn:li:fsd_company:12345678"}]}</code>

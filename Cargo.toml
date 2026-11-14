@@ -1,0 +1,30 @@
+[package]
+name = "linkedin-scraper-rs"
+version = "0.1.0"
+edition = "2024"
+description = "Async LinkedIn scraper in Rust (port of joeyism/linkedin_scraper v3) built on chromiumoxide"
+license = "GPL-3.0-only"
+readme = "README.md"
+keywords = ["linkedin", "scraper", "chromium", "cdp", "async"]
+
+[lib]
+name = "linkedin_scraper"
+
+[dependencies]
+async-trait = "0.1.92"
+chromiumoxide = { version = "0.9.1", default-features = false }
+chrono = "0.4.45"
+dotenvy = "0.15.7"
+futures = "0.3.34"
+regex = "1.13.1"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+strsim = "0.11.1"
+thiserror = "2.0.21"
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "macros", "time", "fs", "io-util", "sync"] }
+tracing = "0.1.44"
+url = "2.5.8"
+
+[dev-dependencies]
+tokio = { version = "1.54.1", features = ["test-util", "macros", "rt-multi-thread"] }
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
